@@ -27,7 +27,7 @@ function App() {
   const [savedCities, setSavedCities] = useLocalStorage<SavedCity[]>('weather-saved-cities', []);
 
   // Hooks
-  const { loading, error, setError, fetchWeatherByCity, fetchWeatherByCoords, fetchForecast, fetchForecastByCoords, fetchAirQuality } = useWeatherAPI();
+  const { loading, error, fetchWeatherByCity, fetchWeatherByCoords, fetchForecast, fetchForecastByCoords, fetchAirQuality } = useWeatherAPI();
   const { loading: geoLoading, error: geoError, coords, getCurrentLocation } = useGeolocation();
 
   // Apply theme
@@ -145,7 +145,7 @@ function App() {
 
   const handleShare = () => {
     if (weather) {
-      shareWeather(weather, forecast);
+      shareWeather(weather);
     }
   };
 

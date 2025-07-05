@@ -75,6 +75,27 @@ export const getWeatherBackground = (condition: WeatherCondition, isDark: boolea
     Fog: isDark
       ? 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)'
       : 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)',
+    Smoke: isDark
+      ? 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)'
+      : 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)',
+    Haze: isDark
+      ? 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)'
+      : 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)',
+    Dust: isDark
+      ? 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)'
+      : 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)',
+    Sand: isDark
+      ? 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)'
+      : 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)',
+    Ash: isDark
+      ? 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)'
+      : 'linear-gradient(135deg, #606c88 0%, #3f4c6b 100%)',
+    Squall: isDark
+      ? 'linear-gradient(135deg, #0c3483 0%, #a2b6df 100%)'
+      : 'linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)',
+    Tornado: isDark
+      ? 'linear-gradient(135deg, #2c1810 0%, #8b4513 100%)'
+      : 'linear-gradient(135deg, #373b44 0%, #4286f4 100%)',
     default: isDark
       ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
       : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -125,7 +146,7 @@ export const parseSearchInput = (input: string) => {
   };
 };
 
-export const shareWeather = async (weather: any, forecast?: any) => {
+export const shareWeather = async (weather: any) => {
   const text = `Current weather in ${weather.name}, ${weather.sys.country}: ${Math.round(weather.main.temp)}°C, ${weather.weather[0].description}`;
   const url = window.location.href;
 
